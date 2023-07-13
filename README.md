@@ -2,16 +2,16 @@
 
 This repository is a clone of worded.netlify.app implemented using Next.js. It serves as a learning project for JavaScript and Next.js, and aims to replicate the functionalities of the original website.
 
-Project Background
-The project was initially started in 2020 as a way for me, Noble Osinachi, to learn JavaScript. Now, with the knowledge gained from learning Next.js, I intend to reimplement the same project using this framework.
+# Project Background
+The project was initially started in 2020 as a final project of the Learn Javascript Online training organised for UNILAG students during the lockdown period. Now, with the knowledge gained from learning Next.js, I intend to reimplement the same project using the Next JS framework in Typescript.
 
-Installation
+# Installation
 To run this project locally, please follow these steps:
 
 Clone the repository to your local machine using the following command:
 bash
 Copy code
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/your-username/your-ou
 Change into the project directory:
 bash
 Copy code
