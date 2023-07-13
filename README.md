@@ -1,5 +1,5 @@
-[clone of worded.netlify.app in next js
-](http://ChREADME
+# Worded Next Js 
+
 This repository is a clone of worded.netlify.app implemented using Next.js. It serves as a learning project for JavaScript and Next.js, and aims to replicate the functionalities of the original website.
 
 Project Background
