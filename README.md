@@ -8,41 +8,34 @@ The project was initially started in 2020 as a final project of the Learn Javasc
 # Installation
 To run this project locally, please follow these steps:
 
-Clone the repository to your local machine using the following command:
-bash
-Copy code
-git clone https://github.com/your-username/your-ou
-Change into the project directory:
-bash
-Copy code
-cd your-repo
+Clone the repository to your local machine.
+
 Install the dependencies:
-Copy code
+```
 npm install
+```
+
 Start the development server:
-arduino
-Copy code
+```
 npm run dev
+```
+
 Open your browser and navigate to http://localhost:3000 to view the application.
-Contributors
+
+# Contributors
 This project has received contributions from the following individuals:
 
 @NobleOsinachi - Noble Osinachi
 @folucode - Tosin Moronfolu
 @AkinAguda - Akinwunmi Aguda
+
 Feel free to reach out to any of us if you have any questions or feedback regarding this project.
 
-License
+# License
 This project is licensed under the MIT License. Feel free to modify and distribute it as per the terms of the license.
 
-Acknowledgments
-I would like to express my gratitude to the creators of worded.netlify.app for providing inspiration and serving as a reference for this project.
+# Acknowledgments
+I would like to express my gratitude to the creators of the worded.netlify.app project for providing inspiration and serving as a reference for this project.
 
-Disclaimer
+# Disclaimer
 This project is a clone and does not claim ownership or rights over the original worded.netlify.app. It is intended for educational purposes only.
-
-
-
-
-
-http://Chat.openAi.com/chat
