@@ -20,9 +20,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/pages/about.jsx", "src/pages/index.js", "src/pages/about.js", "src/pages/_app.tsx", "src/pages/blog.js", "src/pages/blog/[slug].js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "pages/about.jsx", "pages/index.js", "pages/about.js", "pages/_app.tsx", "pages/blog.js", "pages/blog/[slug].js"],
   "exclude": ["node_modules"]
 }
