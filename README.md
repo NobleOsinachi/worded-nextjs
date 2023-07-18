@@ -31,7 +31,7 @@ Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
 Feel free to reach out to any of us if you have any questions or feedback regarding this project.
 
 # License
-This project is licensed under the MIT License. Feel free to modify and distribute it as per the terms of the license.
+This project is licensed under the [MIT License](LICENSE). Feel free to modify and distribute it as per the terms of the license.
 
 # Acknowledgments
 I would like to express my gratitude to the creators of the worded project for providing inspiration and serving as a reference for this project.
