@@ -29,10 +29,11 @@ This project is licensed under the MIT License. Feel free to modify and distribu
 
 # Acknowledgments
 I would like to express my gratitude to the creators of the worded project for providing inspiration and serving as a reference for this project.
-## Acknowledgements
+I learned Javascript from these senior men.
 
  - [Chukwu Tosin](https://github.com/folucode)
  - [Akin Aguda](https://github.com/AkinAguda)
- 
+ - [Olumide](https://github.com/onyxolu)
+
 # Disclaimer
 This project is a clone and does not claim ownership or rights over the original worded.netlify.app. It is intended for educational purposes only.
