@@ -1,7 +1,13 @@
-export default Score(){
+const Score = () => {
+	const score = param.score;
 	return (
-<div>
-Score
-</div>
-		);
-}
+
+		<>
+			Your Score is {score}
+		</>
+	);
+};
+
+export default Score;
+
+
