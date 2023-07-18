@@ -1,9 +1,11 @@
 # Worded Next Js 
 
-This repository is a clone of [worded.netlify.app](https://worded.netlify.app) implemented using Next.js. It serves as a learning project for JavaScript and Next.js, and aims to replicate the functionalities of the original website.
+This repository is a clone of [worded.netlify.app](https://worded.netlify.app) owned by [@ChukwuTosin_](https://github.com/folucode) implemented using Next.js. It serves as a learning project for JavaScript and Next.js, and aims to replicate the functionalities of the original website.
+
+This project is designed to facilitate learning about TypeScript and Next.js. The goal is to utilize Next.js's modular architecture to implement the functionalities of the original website in an efficient and organized manner. By leveraging the out-of-the-box features provided by Next.js, such as server-side rendering, routing, and component-based development, we can create a scalable and maintainable version of the Worded game!
 
 # Project Background
-The project was initially started in 2020 as a final project of the Learn Javascript Online training organised for UNILAG students during the lockdown period. Now, with the knowledge gained from learning Next.js, I intend to reimplement the same project using the Next JS framework in Typescript.
+The project was originally initiated in 2020 as a final project for the *Learn Javascript Online* training program organized by some UNILAG students during the lockdown period. Having acquired knowledge about Next.js, I now plan to redevelop the project using the Next.js framework along with Typescript. This transition will allow me to leverage the benefits of Next.js, such as server-side rendering, efficient routing, and improved type safety through Typescript. By combining these technologies, I aim to enhance the project's functionality, maintainability, and overall development experience.
 
 # Installation
 To run this project locally, please follow these steps:
@@ -33,7 +35,7 @@ I learned Javascript from these senior men.
 
  - [Chukwu Tosin](https://github.com/folucode)
  - [Akin Aguda](https://github.com/AkinAguda)
- - [Olumide](https://github.com/onyxolu)
+ - [Olumide (MVP)](https://github.com/onyxolu)
 
 # Disclaimer
 This project is a clone and does not claim ownership or rights over the original worded.netlify.app. It is intended for educational purposes only.
