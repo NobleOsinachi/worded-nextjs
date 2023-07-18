@@ -1,6 +1,6 @@
 # Worded Next Js 
 
-This repository is a clone of [worded.netlify.app](https://worded.netlify.app) owned by [@ChukwuTosin_](https://github.com/folucode) implemented using Next.js. It serves as a learning project for JavaScript and Next.js, and aims to replicate the functionalities of the original website.
+This repository is a clone of [worded.netlify.app](https://worded.netlify.app) owned by [@ChukwuTosin_](https://github.com/folucode/worded/) implemented using Next.js. It serves as a learning project for JavaScript and Next.js, and aims to replicate the functionalities of the original website.
 
 This project is designed to facilitate learning about TypeScript and Next.js. The goal is to utilize Next.js's modular architecture to implement the functionalities of the original website in an efficient and organized manner. By leveraging the out-of-the-box features provided by Next.js, such as server-side rendering, routing, and component-based development, we can create a scalable and maintainable version of the Worded game!
 
