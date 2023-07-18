@@ -12,7 +12,11 @@ To run this project locally, please follow these steps:
 
 Clone the repository to your local machine.
 
-Install the dependencies:
+```
+git clone 'https://github.com/NobleOsinachi/worded-nextjs.git'
+```
+
+Enter the project folder and install the dependencies:
 ```
 npm install
 ```
@@ -22,7 +26,7 @@ Start the development server:
 npm run dev
 ```
 
-Open your browser and navigate to http://localhost:3000 to view the application.
+Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to view the application.
 
 Feel free to reach out to any of us if you have any questions or feedback regarding this project.
 
