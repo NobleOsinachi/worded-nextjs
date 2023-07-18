@@ -13,67 +13,89 @@ const About = () => {
 
         <div className="w-screen mt-12">
 
-            <div className="flex flex-1 justify-start items-center flex-col  xs:gap-2 md:gap-6 " >
-                <h5 className="font-bold md:text-4xl  xs:text-2xl">Activities</h5>
+            <div className="flex flex-1 justify-start items-center flex-col xs:gap-2 md:gap-6 " >
+                <h5 className="font-bold md:text-4xl xs:text-2xl">
+
+                    About Worded
+
+                </h5>
 
 
-                <p className=" xs:1xl md:text-2xl uppercase font-light">
-                    EduHub Institute of Technology
+                <p className="w-3/5 font-light">
+                    Worded is a web app that helps you learn new words and improve your vocabulary. It is a fun and interactive way to learn new words, and it can help you improve your understanding of the English language.
+
+                    Worded includes a variety of quizzes that help you test your knowledge of antonyms and synonyms.
+                    These quizzes are a great way to stretch your vocabulary.
+                    Worded is a free to use web app, and it is available on all major browsers.
                 </p>
-                <p className="w-3/5 text-center text-2xl  xs:text-[15px] md:text-[22px]" >
-                    At EDUHUB Institute of Technology, students can engage in a variety of activities that complement their academic journey and provide a well-rounded learning experience. The institute understands the importance of extracurricular activities in fostering personal growth, building teamwork skills, and promoting a healthy work-life balance. With this in mind, the website offers a range of activities for students to participate in.
 
+
+                <h5 className="font-bold md:text-2xl xs:text-2xl ">
+
+                    Features
+                </h5>
+
+
+                <p className="w-3/5 font-light">
+
+
+                    Worded includes a variety of features that make it a great way to learn new words, including:
+
+                    <ul>
+                        <li>
+                            1. A growing database of words: Worded includes a large database of words, so you can always find new words to learn.
+
+                        </li>
+                        <li>
+                            2. A variety of learning techniques: Worded uses a variety of learning techniques to help you learn new words, so you can find the techniques that work best for you.
+
+                        </li>
+                        <li>
+                            3. A fun and interactive interface: Worded is a fun and interactive way to learn new words, so you won't get bored.
+
+                        </li>
+                        <li>
+                            4. Free to use: Worded is a free to use web app, so you can start learning new words today.
+                        </li>
+                    </ul>
                 </p>
-
-
-
-                {/* Ctrl f2 = senior brother of ctrl D */}
-
-                <div className="flex  xs:flex-col md:flex-row justify-center items-center gap-10">
-
-
-                    {images.map((image) => (
-                        // <Image
-                        //     key={image}
-                        //     className=" xs:w-3/4 md:w-1/4 shadow-lg hover:shadow-2xl"
-                        //     src={`/images/image-${image}.png`}
-                        //     alt={`image ${image}`}
-                        //     width={100}
-                        //     height={100}
-                        // />
-
-
-
-                        <img
-                            key={image}
-                            className=" xs:w-3/4 md:w-1/4 shadow-lg hover:shadow-2xl"
-                            src={`/images/image-${image}.png`}
-                            alt={`image ${image}`}
-
-
-                        />
-                    ))}
-
-
-                </div>
-
-
-                <button className="border-red-500 border-2 p-2 rounded-md" onClick={() => {
-
-
-                    router.push("/services");
-
-                }}
-
-
-                >
-                    View more
-                </button>
-
             </div>
 
 
-        </div>
+
+
+
+
+
+
+
+
+            <h5 className="font-bold md:text-2xl xs:text-2xl ">
+
+                Repository
+            </h5>
+
+
+            <p className="w-3/5 font-light">
+
+
+
+                <ul>
+                    <li>
+                        Github:
+                        https://github.com/NobleOsinachi/worded-nextjs
+
+                    </li>
+                    <li>
+
+                        Vercel:
+                        https://worded-nextjs.vercel.app
+                    </li>
+
+                </ul>
+            </p>
+
+        </div >
     );
 };
 
