@@ -1,6 +1,9 @@
-import React from "react";
+import * as React from "react";
+import { Component, FunctionComponent } from "react";
 
-export default function Footer() {
+interface FooterProps {}
+
+const Footer: FunctionComponent<FooterProps> = () => {
   return (
     <div className="Footer">
       <h3 className="text-center">
@@ -9,4 +12,6 @@ export default function Footer() {
       </h3>
     </div>
   );
-}
+};
+
+export default Footer;
