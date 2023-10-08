@@ -1,45 +1,67 @@
-import QuestionCard, { QuestionType } from "@/components/QuestionCard";
+"use client";
+import QuestionCard from "@/components/QuestionCard";
 import ScoreCard from "@/components/ScoreCard";
+import { GetServerSideProps, GetStaticProps } from "next";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Question } from "./api/questions/route";
+import Footer from "@/components/Footer";
+
+// interface HomeProps {
+//   questions: Question[];
+// }
+// export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+//   try {
+//     const response = await fetch("/api/questions"); // Absolute URL
+//     if (!response.ok) {
+//       throw new Error("Failed to fetch questions");
+//     }
+//     const questions = await response.json();
+
+//     return { props: { questions } };
+//   } catch (error) {
+//     alert("wahala");
+//     console.error("Error fetching questions:", error);
+//     return { props: { questions: [] } }; // Provide a default value for questions
+//   }
+// };
+
+// { questions }: HomeProps
 
 export default function Home() {
-  let sss = [
-    {
-      id: 1,
-      questionType: 1 as QuestionType,
-      word: "Noble",
-      optionA: "Blessed",
-      optionB: "Fortune",
-    },
+  const [questions, setQuestions] = useState([]);
 
-    {
-      id: 2,
-      questionType: 1 as QuestionType,
-      word: "Noble",
-      optionA: "Blessed",
-      optionB: "Fortune",
-    },
-  ];
+  useEffect(() => {
+    // Fetch data from the API endpoint
+    fetch("/api/questions")
+      .then((response) => response.json())
+      .then((data) => setQuestions(data));
+  }, []);
+
   return (
     <>
       <div className="container mx-auto">
         <article className="w-4/5 mx-auto">
           <p className="p-2 text-center  text-2xl font-bold">Worded Game</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {sss.map((s) => (
+            {/* {JSON.stringify(questions)} */}
+
+            {questions?.map((question: Question) => (
               <QuestionCard
-                key={s.id}
-                id={0}
-                questionType={s.questionType}
-                word={s.word}
-                optionA={s.optionA}
-                optionB={s.optionB}
+                key={question.id}
+                question={question}
               ></QuestionCard>
             ))}
           </div>
+
+          <hr />
+
+          <br />
+          <br />
         </article>
       </div>
+
+      <Footer></Footer>
     </>
   );
 }

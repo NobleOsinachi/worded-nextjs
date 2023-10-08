@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { QuestionType } from "@/types";
+// import { type } from "@/types";
 
-interface Question {
+export interface Question {
   id: number;
   type: string;
   word: string;
