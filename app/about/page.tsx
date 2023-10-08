@@ -40,7 +40,7 @@ const About = () => {
             </li>
             <li>
               3. A fun and interactive interface: Worded is a fun and
-              interactive way to learn new words, so you won't get bored.
+              interactive way to learn new words, so you would not get bored.
             </li>
             <li>
               4. Free to use: Worded is a free to use web app, so you can start

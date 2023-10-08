@@ -2,26 +2,30 @@ import React, { Component } from "react";
 import { shuffleArray } from "@/utils/shuffleArray";
 import { Question } from "@/app/api/questions/route";
 
-class QuestionCard extends Component {
-  constructor(props) {
-    super(props);
+interface QuestionCardProps {
+  question: Question;
+}
 
-    this.state = {
-      buttonsDisabled: false,
-      highlightButtons: false,
-      count: 0,
-      score: 0,
-      questionsAnswered: [],  
-    };
+class QuestionCard extends Component<QuestionCardProps> {
+  constructor(props: QuestionCardProps) {
+    super(props);
   }
 
-  componentDidUpdate(prevProps: any, prevState: any) {
+  state = {
+    buttonsDisabled: false,
+    highlightButtons: false,
+    count: 0,
+    score: 0,
+    questionsAnswered: [],
+  };
+
+  componentDidUpdate(prevProps: QuestionCardProps, prevState: any) {
     if (this.state.count === 10) {
       alert("completed!!!");
     }
   }
 
-  onClick = (question: any) => {
+  onClick = (question: Question) => {
     this.setState({
       buttonsDisabled: true,
       highlightButtons: true,
