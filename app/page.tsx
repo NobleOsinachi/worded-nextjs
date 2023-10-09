@@ -5,28 +5,7 @@ import { GetServerSideProps, GetStaticProps } from "next";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Question } from "./api/questions/route";
-import Footer from "@/components/Footer";
-
-// interface HomeProps {
-//   questions: Question[];
-// }
-// export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-//   try {
-//     const response = await fetch("/api/questions"); // Absolute URL
-//     if (!response.ok) {
-//       throw new Error("Failed to fetch questions");
-//     }
-//     const questions = await response.json();
-
-//     return { props: { questions } };
-//   } catch (error) {
-//     alert("wahala");
-//     console.error("Error fetching questions:", error);
-//     return { props: { questions: [] } }; // Provide a default value for questions
-//   }
-// };
-
-// { questions }: HomeProps
+// import Footer from "@/components/Footer";
 
 export default function Home() {
   const [questions, setQuestions] = useState([]);
@@ -53,15 +32,12 @@ export default function Home() {
               ></QuestionCard>
             ))}
           </div>
-
           <hr />
-
-          <br />
           <br />
         </article>
       </div>
 
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </>
   );
 }
