@@ -4,7 +4,7 @@ This repository is a clone of [worded.netlify.app](https://worded.netlify.app) o
 
 This project is designed to facilitate learning about TypeScript and Next.js. The goal is to utilize Next.js's modular architecture to implement the functionalities of the original website in an efficient and organized manner. By leveraging the out-of-the-box features provided by Next.js, such as server-side rendering, routing, and component-based development, we can create a scalable and maintainable version of the Worded game!
 
-![screenshot](screenshot.png)
+[![screenshot](screenshot.png)](https://worded-nextjs.vercel.app/)
 
 # Project Background
 The project was originally initiated in 2020 as a final project for the *Learn Javascript Online* training program organized by some UNILAG students during the lockdown period. Having acquired knowledge about Next.js, I now plan to redevelop the project using the Next.js framework along with Typescript. This transition will allow me to leverage the benefits of Next.js, such as server-side rendering, efficient routing, and improved type safety through Typescript. By combining these technologies, I aim to enhance the project's functionality, maintainability, and overall development experience.
