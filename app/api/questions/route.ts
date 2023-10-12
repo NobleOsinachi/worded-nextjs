@@ -1,3 +1,4 @@
+import { shuffleArray } from "@/utils/shuffleArray";
 import { NextRequest, NextResponse } from "next/server";
 // import { type } from "@/types";
 
@@ -129,6 +130,6 @@ export const GET = async (req: NextRequest) => {
     }
   } else {
     // If 'id' is not provided, return all questions
-    return NextResponse.json(questions);
+    return NextResponse.json(shuffleArray(questions));
   }
 };

@@ -1,9 +1,7 @@
-import * as React from "react";
-import { Component, FunctionComponent } from "react";
 
 interface FooterProps {}
 
-const Footer: FunctionComponent<FooterProps> = () => {
+const Footer = (props: FooterProps) => {
   return (
     <div className="Footer">
       <h3 className="text-center">

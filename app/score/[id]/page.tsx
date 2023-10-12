@@ -1,14 +1,17 @@
 "use client";
+import Link from "next/link";
 import router from "next/router";
 import React from "react";
 import ProgressBar from "react-customizable-progressbar";
 
 interface ScoreCardProps {
-  score: number;
+  params: {
+    id: number;
+  };
 }
 
-const ScoreCard = ({ score }: ScoreCardProps) => {
-  const progress = score || 0;
+const ScoreCard = ({ params }: ScoreCardProps) => {
+  const progress = params.id || 0;
 
   return (
     <div
@@ -21,14 +24,10 @@ const ScoreCard = ({ score }: ScoreCardProps) => {
       <ProgressBar progress={progress} radius={100} />
       <span style={{ marginTop: "0px", fontSize: "40px" }}>{progress}%</span>
 
-      <button
-        className="bg-blue-200 p-3"
-        onClick={() => {
-          router.push("/");
-        }}
-      >
+      <Link className="bg-blue-200 p-3 mt-10 " href={"/"}>
+        {" "}
         Try again?
-      </button>
+      </Link>
     </div>
   );
 };
