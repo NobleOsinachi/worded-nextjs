@@ -1,62 +1,91 @@
-import React, { Component, useState } from "react";
+import React, { Component, useEffect, useState } from "react";
 import { shuffleArray } from "@/utils/shuffleArray";
 import { Question } from "@/app/api/questions/route";
 
 interface QuestionCardProps {
-  index: number;
+  questionIndex: number;
   question: Question;
   incrementCount: Function;
+  incrementScore: Function;
+  shuffledAnswers: Array<string>;
 }
 
 const QuestionCard = ({
-  index,
+  questionIndex,
   question,
   incrementCount,
+  incrementScore,
+  shuffledAnswers,
 }: QuestionCardProps) => {
   const [buttonsDisabled, setButtonsDisabled] = useState(false);
   const [highlightButtons, setHighlightButtons] = useState(false);
+  const [buttons, setButtons] = useState(shuffleButtons(question));
 
-  const handleClick = () => {
+  const handleClick = (question: Question) => {
     incrementCount();
+    // Disable buttons after a correct answer.
+    setButtonsDisabled(true);
+    // Highlight the correct answer button.
+    setHighlightButtons(true);
+
+    if (question.answers.correct) {
+      incrementScore();
+    }
   };
 
-  // const { buttonsDisabled, highlightButtons } = this.state;
-  // let { question, index } = this.props;
+  function shuffleButtons(question: Question) {
+    // Combine correct and incorrect answers and shuffle them.
+    const { correct, incorrect } = question.answers;
+    const allAnswers = [correct, incorrect];
+    return shuffleArray(allAnswers);
+  }
+
+  useEffect(() => {
+    // Shuffle the buttons when the component initially renders.
+    setButtons(shuffleButtons(question));
+  }, [question.answers]);
 
   return (
     <div className="bg-white rounded-lg shadow-md p-4">
-      <h5 className="text-lg font-semibold mb-2">Question {index + 1}</h5>
+      <h5 className="text-lg font-semibold mb-2">
+        Question {questionIndex + 1}
+      </h5>
       <p className="text-gray-700 mb-4">
         Which word is <span className="italic font-bold">{question.type}</span>{" "}
         to <span className="italic font-bold">{question.word}</span>
       </p>
+      {/* {shuffleArray([ <button key={question.answers.correct} className={ "px-4 py-2 text-white rounded-md mr-2 " + (!highlightButtons ? "bg-blue-500" : "bg-green-500")} id={question.answers.correct} disabled={buttonsDisabled} onClick={handleClick} > {question.answers.correct} </button>, <button key={question.answers.incorrect} className={ "px-4 py-2 text-white rounded-md mr-2 " + (!highlightButtons ? "bg-blue-500" : "bg-red-500")} id={question.answers.incorrect} disabled={buttonsDisabled} onClick={handleClick} > {question.answers.incorrect} </button>,])}*/}
+      {/* {shuffledAnswers.map((answer, answerIndex) => (
+ <button
+ key={answer}
+ className={
 
-      {shuffleArray([
+ "px-4 py-2 text-white rounded-md mr-2 " +
+ (!highlightButtons ? "bg-blue-500" : "bg-green-500")
+ }
+ id={answer}
+ disabled={buttonsDisabled}
+ onClick={() => handleClick(question)}
+ >
+ {answer}
+ </button>
+ ))} */}
+      {buttons.map((buttonText, i) => (
         <button
-          key={question.answers.correct}
+          key={i}
           className={
+            // hover:bg-slate-600 m-0 p-2 hover:rounded-md active:bg-purple-600 focus:ring focus:outline-none focus:ring-green-700 focus:rounded-md
+
             "px-4 py-2 text-white rounded-md mr-2 " +
-            (!highlightButtons ? "bg-blue-500" : "bg-green-500")
+            (highlightButtons ? "bg-green-500" : "bg-blue-500")
           }
-          id={question.answers.correct}
+          id={buttonText}
           disabled={buttonsDisabled}
-          onClick={handleClick}
+          onClick={() => handleClick(question)}
         >
-          {question.answers.correct}
-        </button>,
-        <button
-          key={question.answers.incorrect}
-          className={
-            "px-4 py-2 text-white rounded-md mr-2 " +
-            (!highlightButtons ? "bg-blue-500" : "bg-red-500")
-          }
-          id={question.answers.incorrect}
-          disabled={buttonsDisabled}
-          onClick={handleClick}
-        >
-          {question.answers.incorrect}
-        </button>,
-      ])}
+          {buttonText}
+        </button>
+      ))}
     </div>
   );
 };
