@@ -25,7 +25,7 @@ const Quiz = () => {
     fetch("/api/questions")
       .then((response) => response.json())
       .then((data) => setQuestions(data));
-  });
+  }, []);
 
   useEffect(() => {
     if (count === 10) {
@@ -33,7 +33,7 @@ const Quiz = () => {
         router.push("/score/?id=" + score);
       }, 500);
     }
-  }, [count, router, score]);
+  }, [count]);
 
   return (
     <>

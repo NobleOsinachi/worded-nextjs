@@ -31,15 +31,16 @@ const QuestionCard = ({
   };
 
   // Combine correct and incorrect answers and shuffle them.
-  const shuffleButtons = (question: Question) =>
-    shuffleArray([question.answers.correct, question.answers.incorrect]);
+  const shuffleButtons = (question: Question) => {
+    return shuffleArray([question.answers.correct, question.answers.incorrect]);
+  };
 
   const [buttons, setButtons] = useState(shuffleButtons(question));
 
   useEffect(() => {
-    // Shuffle the buttons when the component initially renders.
+    // Shuffle the buttons only ONCE when the component initially renders.
     setButtons(shuffleButtons(question));
-  }, [question]);
+  }, [question.answers]);
 
   return (
     <div className="bg-white rounded-lg shadow-md p-4">
