@@ -4,6 +4,7 @@ git add .
 
 git status
 
-git commit -m "Fixed build conflicts in last deployment"
+git commit -m "Resolved build conflicts from the previous deployment."
 
 git push origin main
+
