@@ -1,6 +1,6 @@
 "use client";
 
-import Footer from "@/components/Footer";
+import FooterPage from "@/components/FooterPage";
 import Quiz from "@/components/Quiz";
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Quiz></Quiz>
 
-      <Footer></Footer>
+      <FooterPage></FooterPage>
     </>
   );
 }

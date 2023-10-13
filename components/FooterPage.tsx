@@ -1,6 +1,6 @@
-interface FooterProps {}
+"use client";
 
-const Footer = (props: FooterProps) => {
+export default function FooterPage() {
   return (
     <div className="footer mb-5">
       <h3 className="text-center">
@@ -9,6 +9,4 @@ const Footer = (props: FooterProps) => {
       </h3>
     </div>
   );
-};
-
-export default Footer;
+}
