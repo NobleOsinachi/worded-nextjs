@@ -1,5 +1,4 @@
 import nodemailer from "nodemailer";
-import { shuffleArray } from "@/utils/shuffleArray";
 import { NextRequest, NextResponse } from "next/server";
 import { NextApiResponse } from "next";
 

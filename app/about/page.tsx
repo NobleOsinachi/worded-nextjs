@@ -1,8 +1,5 @@
 "use client";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
-
-// import { useRouter } from "next/router";
 
 const About = () => {
   const images = [1, 2, 3];
@@ -51,14 +48,7 @@ const About = () => {
       </div>
 
       <div className="flex flex-1 justify-start items-center flex-col xs:gap-2 md:gap-6 ">
-        {/* <h5 className="font-bold md:text-4xl xs:text-2xl">
-
-                    About Worded
-
-                </h5> */}
-
         <h5 className="font-bold md:text-2xl xs:text-2xl ">Repository</h5>
-
         <p className="w-3/5 font-light">
           <ul>
             <li>

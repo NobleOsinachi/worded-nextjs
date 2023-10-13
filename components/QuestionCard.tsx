@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { shuffleArray } from "@/utils/shuffleArray";
 import { Question } from "@/app/api/questions/route";
 
@@ -30,7 +30,6 @@ const QuestionCard = ({
     }
   };
 
-  // Combine correct and incorrect answers and shuffle them.
   const shuffleButtons = (question: Question) => {
     return shuffleArray([question.answers.correct, question.answers.incorrect]);
   };
@@ -52,15 +51,11 @@ const QuestionCard = ({
         to <span className="italic font-bold">{question.word}</span>
       </p>
 
-      {/* {shuffleArray([ <button key={question.answers.correct} className={ "px-4 py-2 text-white rounded-md mr-2 " + (!highlightButtons ? "bg-blue-500" : "bg-green-500")} id={question.answers.correct} disabled={buttonsDisabled} onClick={handleClick} > {question.answers.correct} </button>, <button key={question.answers.incorrect} className={ "px-4 py-2 text-white rounded-md mr-2 " + (!highlightButtons ? "bg-blue-500" : "bg-red-500")} id={question.answers.incorrect} disabled={buttonsDisabled} onClick={handleClick} > {question.answers.incorrect} </button>,])}*/}
-
-      {/* {shuffledAnswers.map((answer, answerIndex) => ( <button key={answer} className={ "px-4 py-2 text-white rounded-md mr-2 " + (!highlightButtons ? "bg-blue-500" : "bg-green-500") } id={answer} disabled={buttonsDisabled} onClick={() => handleClick(question)} > {answer} </button> ))} */}
-
-      {buttons.map((buttonText, i) => (
+      {buttons.map((buttonText, buttonIndex) => (
         <button
-          key={i}
+          key={buttonIndex}
           className={
-            // hover:bg-slate-600 hover:rounded-md active:bg-purple-600 focus:ring focus:outline-none focus:ring-green-700 focus:rounded-md
+            /* hover:bg-slate-600 hover:rounded-md active:bg-purple-600 focus:ring focus:outline-none focus:ring-green-700 focus:rounded-md */
 
             "px-4 py-2 text-white rounded-md mr-2 p-2 " +
             (highlightButtons

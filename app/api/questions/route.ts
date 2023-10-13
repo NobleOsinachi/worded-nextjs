@@ -1,6 +1,5 @@
 import { shuffleArray } from "@/utils/shuffleArray";
 import { NextRequest, NextResponse } from "next/server";
-// import { type } from "@/types";
 
 export interface Question {
   id: number;
@@ -104,14 +103,6 @@ const questions: Array<Question> = [
     },
   },
 ];
-
-// export const GET = async (req: NextRequest) => {
-//   const { searchParams } = new URL(req.url);
-//   const id = Number.parseInt(searchParams.get("id")!, 10);
-//   const questionById = questions.find((q) => q.id === id);
-
-//   return NextResponse.json({ questionById, questions });
-// };
 
 export const GET = async (req: NextRequest) => {
   const { searchParams } = new URL(req.url);
