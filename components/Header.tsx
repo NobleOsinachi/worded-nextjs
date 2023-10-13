@@ -3,7 +3,10 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const Header = () => {
-  const links = ["About", "Noble"];
+  const links = [
+    "About",
+    // "Question", "Score"
+  ];
   const router = useRouter();
 
   return (
@@ -55,12 +58,6 @@ const Header = () => {
           ))}
         </ul>
       </nav>
-
-      {/* <div className="flex">
-                <div>Element 1</div>
-                <div className="m-auto">Element 2 (with mr-auto)</div>
-                <div>Element 3</div>
-            </div> */}
     </>
   );
 };

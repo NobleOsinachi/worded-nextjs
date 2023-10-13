@@ -1,1 +1,8 @@
-[]
+{
+    "crons": [
+      {
+        "path": "/api/mail-me",
+        "schedule": "*/10 * * * *"
+      }
+    ]
+  }

@@ -71,7 +71,7 @@ const About = () => {
               </a>
             </li>
             <li>
-              Vercel:{" "}
+              Live Deployment on Vercel:{" "}
               <a
                 href="https://worded-nextjs.vercel.app"
                 target="_blank"

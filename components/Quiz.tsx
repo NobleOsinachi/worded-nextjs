@@ -4,20 +4,20 @@ import { Question } from "@/app/api/questions/route";
 import { useState, useEffect } from "react";
 import QuestionCard from "./QuestionCard";
 import router from "next/router";
-import { shuffleArray } from "@/utils/shuffleArray";
+
+import { useRouter } from "next/navigation";
 
 const Quiz = () => {
-  let [questions, setQuestions] = useState([]);
-
+  const [questions, setQuestions] = useState([]);
   const [count, setCount] = useState(0);
   const [score, setScore] = useState(0);
-  const [questionsAnswered, setQuestionsAnswered] = useState([]);
+  const router = useRouter();
 
   const handleIncrementCount = () => {
     setCount(count + 1);
   };
   const handleIncrementScore = () => {
-    setScore(count + 1);
+    setScore(score + 1);
   };
 
   useEffect(() => {
@@ -25,13 +25,15 @@ const Quiz = () => {
     fetch("/api/questions")
       .then((response) => response.json())
       .then((data) => setQuestions(data));
-  }, []);
+  });
 
   useEffect(() => {
     if (count === 10) {
-      router.push("/score/?id=" + score);
+      setTimeout(function () {
+        router.push("/score/?id=" + score);
+      }, 500);
     }
-  }, [count]);
+  }, [count, router, score]);
 
   return (
     <>
@@ -40,12 +42,6 @@ const Quiz = () => {
           <p className="p-2 text-center  text-2xl font-bold">Worded Game</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {questions?.map((question: Question, questionIndex: number) => {
-              // Shuffle the answer buttons just once here
-              const shuffledAnswers = shuffleArray([
-                question.answers.correct,
-                question.answers.incorrect,
-              ]);
-
               return (
                 <QuestionCard
                   key={question.id}
@@ -53,7 +49,6 @@ const Quiz = () => {
                   question={question}
                   incrementCount={handleIncrementCount}
                   incrementScore={handleIncrementScore}
-                  shuffledAnswers={shuffledAnswers}
                 ></QuestionCard>
               );
             })}
