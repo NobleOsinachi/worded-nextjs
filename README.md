@@ -44,4 +44,4 @@ I learned Javascript from these senior men.
  - [Olumide (MVP)](https://github.com/onyxolu)
 
 # Disclaimer
-This project is a clone and does not claim ownership or rights over the original worded.netlify.app. It is intended for educational purposes only.
+This project is a clone and does not claim ownership or rights over the original [web app](https://worded.netlify.app). It is intended for educational purposes only.
