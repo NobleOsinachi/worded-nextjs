@@ -1,7 +1,7 @@
 "use client";
 
-import FooterPage from "@/components/FooterPage";
-import Quiz from "@/components/Quiz";
+import FooterPage from "@/app/components/FooterPage";
+import Quiz from "@/app/components/Quiz";
 
 export default function Home() {
   return (
