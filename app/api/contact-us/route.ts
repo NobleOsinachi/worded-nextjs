@@ -2,12 +2,6 @@ import nodemailer from "nodemailer";
 import { NextRequest, NextResponse } from "next/server";
 import { NextApiResponse } from "next";
 
-interface IMessage {
-  name: string;
-  email: string;
-  message: string;
-}
-
 export const GET = async (req: NextRequest, res: NextApiResponse) => {
   try {
     // Extract query parameters
@@ -19,7 +13,7 @@ export const GET = async (req: NextRequest, res: NextApiResponse) => {
     // Check if all required parameters are present
     if (!name || !email || !message) {
       return NextResponse.json(
-        { message: "Missing required parameters" },
+        { status: false, message: "Missing required parameters" },
         { status: 400 }
       );
     }
@@ -35,6 +29,7 @@ export const GET = async (req: NextRequest, res: NextApiResponse) => {
     const mailOptions = {
       from: "Elbon Concepts Inquiry Form <elbonconcepts@gmail.com>",
       to: "nobleosinachi@outlook.com",
+      replyTo: email,
       subject: "New Inquiry from Elbon Concepts",
       html: `
         <h1>New Inquiry</h1>
@@ -48,13 +43,13 @@ export const GET = async (req: NextRequest, res: NextApiResponse) => {
     await transporter.sendMail(mailOptions);
     console.log("Email sent successfully");
     return NextResponse.json(
-      { message: "Email sent successfully" },
+      { status: true, message: "Email sent successfully" },
       { status: 200 }
     );
   } catch (error) {
     console.error("Error sending email: " + error);
     return NextResponse.json(
-      { message: "Error sending email" },
+      { status: false, message: "Error sending email" },
       { status: 500 }
     );
   }
