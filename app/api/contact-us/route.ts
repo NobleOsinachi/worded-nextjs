@@ -34,7 +34,7 @@ export const GET = async (req: NextRequest, res: NextApiResponse) => {
 
     const mailOptions = {
       from: "Elbon Concepts Inquiry Form <elbonconcepts@gmail.com>",
-      to: "NOBLEOSINACHI98@GMAIL.COM",
+      to: "nobleosinachi@outlook.com",
       subject: "New Inquiry from Elbon Concepts",
       html: `
         <h1>New Inquiry</h1>
