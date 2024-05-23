@@ -2,9 +2,9 @@ import nodemailer from "nodemailer";
 import { NextRequest, NextResponse } from "next/server";
 import { NextApiResponse } from "next";
 
-export const POST = async (req: NextRequest, res: NextApiResponse) => {
+export const GET = async (req: NextRequest, res: NextApiResponse) => {
   try {
-    // Extract query parameters
+    // Extract query parameters for GET
     const { searchParams } = new URL(req.url);
     const name = searchParams.get("name");
     const email = searchParams.get("email");
