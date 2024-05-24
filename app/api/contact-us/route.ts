@@ -4,12 +4,18 @@ import { NextApiResponse } from "next";
 
 export const GET = async (req: NextRequest, res: NextApiResponse) => {
   try {
+    /*
     // Set CORS headers
     const responseHeaders = new Headers();
     responseHeaders.set("Access-Control-Allow-Origin", "*");
     responseHeaders.set("Access-Control-Allow-Methods", "GET, OPTIONS");
     responseHeaders.set("Access-Control-Allow-Headers", "Content-Type");
 
+
+
+    res.setHeader("Allow", "GET");
+
+    */
 
     // Extract query parameters for GET
     const { searchParams } = new URL(req.url);
@@ -37,7 +43,7 @@ export const GET = async (req: NextRequest, res: NextApiResponse) => {
       from: "Elbon Concepts Inquiry Form <elbonconcepts@gmail.com>",
       to: "nobleosinachi@outlook.com",
       replyTo: email,
-      subject: "New Inquiry from Elbon Concepts",
+      subject: "New Inquiry from Elbon Concepts Website",
       html: `
         <h1>New Inquiry</h1>
         <p><strong>Name:</strong> ${name}</p>
@@ -62,12 +68,14 @@ export const GET = async (req: NextRequest, res: NextApiResponse) => {
   }
 };
 
-
+/*
 
 export const OPTIONS = async () => {
-  const responseHeaders = new Headers();
-  responseHeaders.set("Access-Control-Allow-Origin", "*");
-  responseHeaders.set("Access-Control-Allow-Methods", "GET, OPTIONS");
-  responseHeaders.set("Access-Control-Allow-Headers", "Content-Type");
-  return new NextResponse(null, { status: 204, headers: responseHeaders });
+const responseHeaders = new Headers();
+responseHeaders.set("Access-Control-Allow-Origin", "*");
+responseHeaders.set("Access-Control-Allow-Methods", "GET, OPTIONS");
+responseHeaders.set("Access-Control-Allow-Headers", "Content-Type");
+return new NextResponse(null, { status: 204, headers: responseHeaders });
 };
+
+*/
