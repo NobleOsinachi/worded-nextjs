@@ -4,6 +4,13 @@ import { NextApiResponse } from "next";
 
 export const GET = async (req: NextRequest, res: NextApiResponse) => {
   try {
+    // Set CORS headers
+    const responseHeaders = new Headers();
+    responseHeaders.set("Access-Control-Allow-Origin", "*");
+    responseHeaders.set("Access-Control-Allow-Methods", "GET, OPTIONS");
+    responseHeaders.set("Access-Control-Allow-Headers", "Content-Type");
+
+
     // Extract query parameters for GET
     const { searchParams } = new URL(req.url);
     const name = searchParams.get("name");
@@ -53,4 +60,14 @@ export const GET = async (req: NextRequest, res: NextApiResponse) => {
       { status: 500 }
     );
   }
+};
+
+
+
+export const OPTIONS = async () => {
+  const responseHeaders = new Headers();
+  responseHeaders.set("Access-Control-Allow-Origin", "*");
+  responseHeaders.set("Access-Control-Allow-Methods", "GET, OPTIONS");
+  responseHeaders.set("Access-Control-Allow-Headers", "Content-Type");
+  return new NextResponse(null, { status: 204, headers: responseHeaders });
 };
